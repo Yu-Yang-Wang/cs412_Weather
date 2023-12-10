@@ -1,0 +1,9 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label>
+        Input a city name to get the weather:
+        <input type="text" formControlName="inputField" />
+    </label>
+    <button type="submit" [disabled]="!form.valid">Submit</button>
+    <br>
+    <span *ngIf="loading">Loading...</span>
+</form>

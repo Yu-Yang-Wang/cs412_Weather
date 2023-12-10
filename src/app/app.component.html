@@ -1,6 +1,2 @@
-<button (click)="onBtnClick()">get backend data</button>
-<div *ngIf="showData">
-  <div *ngFor="let item of dataMockFromBackend.data | keyvalue">
-    <strong>{{ item.key }}:</strong> {{ item.value }}
-  </div>
-</div>
+<app-form (submitted)="handleSubmission($event)"></app-form>
+<app-result [showMessage]="showMessage" [message]="message"></app-result>
